@@ -1,0 +1,50 @@
+--- 
+layout: base 
+---
+
+<header class="section spot-color-dark-blue">
+  <div class="section__inner">
+    <div class="region" style="padding-top:0">
+      {# <h1 class="text-center">{{ title }}</h1> #}
+    </div>
+    {# <div class="wrapper flow">
+      <div class="hero region">
+        <div>
+          <h1>Lorem ipsum</h1>
+          <p>Lorem ipsum dolar sit.</p>
+        </div>
+        <div class="frame">
+          {% imagePlaceholder "./src/assets/images/banjo.png", "Alt... The preview image for social media" %}
+        </div>
+      </div>
+    </div> #}
+  </div>
+</header>
+
+<div class="section spot-color-middle-blue" style="margin-top: 0">
+  <div class="section__inner">
+    <div class="region" style="padding-top:0"></div>
+  </div>
+</div>
+<div class="section spot-color-light-blue" style="margin-top: 0">
+  <div class="section__inner">
+    <div class="region" style="padding-top:0"></div>
+  </div>
+</div>
+
+<article class="region">
+  <div class="wrapper flow prose">
+    {{ content | safe }}
+  </div>
+</article>
+
+<article class="region" style="--region-space-top: var(--space-s)">
+  <div class="wrapper flow prose">
+    <h2>{{ blog.title }}</h2>
+    <!-- blog intro text is optional. -->
+    {% if blog.intro %}
+      <p>{{ blog.intro }}</p>
+    {% endif %}
+  </div>
+  {% include "partials/blog.njk" %}
+</article>
